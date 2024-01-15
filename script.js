@@ -1,3 +1,7 @@
+//? RECUPERARE ELEMENTI DAL DOM
+const list = document.getElementById('list');
+
+
 //? MILESTONE 0:
 // Creare l’array di oggetti con le informazioni fornite.
 const teamMembers = [
@@ -36,11 +40,28 @@ const teamMembers = [
 //? MILESTONE 1:
 // Stampare su console le informazioni di nome, ruolo e la stringa della foto
 
+let items = '';
+
 for (let i = 0; i < teamMembers.length; i++) {
     const currentTeamMember = teamMembers[i];
 
     for (let key in currentTeamMember) {
         console.log(currentTeamMember[key]);
     };
-}
 
+
+    //? MILESTONE 2:
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+    items += `<li>
+                <div class="card col" style="width: 25rem;">
+                    <img src="img/${teamMembers[i].img}" class="card-img-top" alt="${teamMembers[i].img}">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">${teamMembers[i].name}</h5>
+                        <p class="card-text text-center">${teamMembers[i].role}</p>
+                    </div>
+                </div>
+             </li>`;
+};
+
+list.innerHTML = items;
