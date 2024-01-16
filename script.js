@@ -55,7 +55,7 @@ for (let i = 0; i < teamMembers.length; i++) {
 
     items += `<li>
                 <div class="card col" style="width: 25rem;">
-                    <img src="img/${teamMembers[i].img}" class="card-img-top" alt="${teamMembers[i].img}">
+                    <img src="img/${teamMembers[i].img}" class="card-img-top" alt="${currentTeamMember.name}">
                     <div class="card-body">
                         <h5 class="card-title text-center">${teamMembers[i].name}</h5>
                         <p class="card-text text-center">${teamMembers[i].role}</p>
